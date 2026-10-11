@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Honest 4.0 - Banana Hacks 2026 Interactive Demo Preview</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Inter", sans-serif;
+      background-color: #0f172a;
+      margin: 0;
+      padding: 30px 20px;
+      color: #f1f5f9;
+    }
+    .hackathon-banner {
+      max-width: 960px;
+      margin: 0 auto 24px auto;
+      background: linear-gradient(135deg, #312e81 0%, #4f46e5 50%, #7c3aed 100%);
+      border-radius: 16px;
+      padding: 20px 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 10px 30px -10px rgba(79, 70, 229, 0.5);
+    }
+    .banner-title {
+      font-size: 20px;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .banner-badge {
+      background: #f59e0b;
+      color: #000;
+      font-weight: 800;
+      font-size: 11px;
+      padding: 3px 10px;
+      border-radius: 999px;
+      letter-spacing: 0.05em;
+    }
+    .banner-desc {
+      font-size: 13px;
+      color: #e0e7ff;
+      margin-top: 4px;
+    }
+    .product-stage {
+      max-width: 960px;
+      margin: 0 auto;
+      background: #ffffff;
+      color: #1e293b;
+      border-radius: 20px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+      padding: 36px;
+    }
+    .switcher-bar {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 28px;
+      padding-bottom: 20px;
+      border-bottom: 2px solid #f1f5f9;
+      flex-wrap: wrap;
+    }
+    .btn-switch {
+      background: #f1f5f9;
+      color: #334155;
+      border: 1px solid #cbd5e1;
+      padding: 8px 16px;
+      border-radius: 10px;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .btn-switch:hover {
+      background: #e2e8f0;
+    }
+    .btn-switch.active {
+      background: #4f46e5;
+      color: #ffffff;
+      border-color: #4f46e5;
+      box-shadow: 0 4px 12px rgba(79, 70, 229, 0.35);
+    }
+    .product-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 36px;
+    }
+    .product-img-box {
+      width: 100%;
+      height: 380px;
+      background: #f8fafc;
+      border-radius: 16px;
+      border: 1px solid #e2e8f0;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .product-img-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .product-details {
+      display: flex;
+      flex-direction: column;
+    }
+    h1#productTitle {
+      font-size: 24px;
+      font-weight: 800;
+      margin: 0 0 10px 0;
+      line-height: 1.3;
+      color: #0f172a;
+    }
+    .price-row {
+      font-size: 28px;
+      font-weight: 800;
+      color: #b12704;
+      margin-bottom: 16px;
+    }
+    .specs-box {
+      font-size: 13.5px;
+      line-height: 1.6;
+      color: #475569;
+      background: #f8fafc;
+      padding: 16px;
+      border-radius: 12px;
+      margin-bottom: 24px;
+      border: 1px solid #e2e8f0;
+    }
+    .reviews-section {
+      margin-top: 32px;
+      border-top: 2px solid #f1f5f9;
+      padding-top: 24px;
+    }
+    .reviews-title {
+      font-size: 16px;
+      font-weight: 800;
+      margin-bottom: 14px;
+      color: #0f172a;
+    }
+    .review-item {
+      background: #f8fafc;
+      border-radius: 10px;
+      padding: 14px;
+      margin-bottom: 10px;
+      font-size: 13px;
+      color: #334155;
+      border: 1px solid #e2e8f0;
+    }
+    .review-author {
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 4px;
+    }
+    .callout-box {
+      margin-top: 24px;
+      background: #eff6ff;
+      border: 1px solid #bfdbfe;
+      border-radius: 12px;
+      padding: 14px 18px;
+      font-size: 12.5px;
+      color: #1e40af;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Banana Hacks 2026 Pitch Banner -->
+  <div class="hackathon-banner">
+    <div>
+      <div class="banner-title">
+        <span>🍌 Banana Hacks 2026 Project Demo</span>
+        <span class="banner-badge">Generative AI & Image Creation</span>
+      </div>
+      <div class="banner-desc">
+        Watch Honest 4.0 inspect e-commerce listings with Multimodal Vision (Gemini 1.5 Flash) and generate synthetic reality photos (FLUX/SD).
+      </div>
+    </div>
+    <div style="text-align: right; font-size: 12px; color: #c7d2fe;">
+      Widget is active in the bottom-right corner ↘
+    </div>
+  </div>
+
+  <!-- Simulated E-Commerce Store Stage -->
+  <div class="product-stage">
+    <!-- Product Switcher Bar -->
+    <div class="switcher-bar">
+      <span style="font-size: 12px; font-weight: 800; align-self: center; color: #64748b;">DEMO ITEMS:</span>
+      <button class="btn-switch active" onclick="switchProduct(0)">1. Trench Coat (Banana Hacks Flagship)</button>
+      <button class="btn-switch" onclick="switchProduct(1)">2. Sony WH-1000XM5 (Tech Match)</button>
+      <button class="btn-switch" onclick="switchProduct(2)">3. Retro Corduroy Jacket (Sizing & Color)</button>
+    </div>
+
+    <!-- Product Showcase Grid -->
+    <div class="product-grid">
+      <div class="product-img-box">
+        <img id="product-img-el" src="https://images.unsplash.com/photo-1544923246-77307dd654cb?auto=format&fit=crop&w=800&q=80" alt="Product Catalog Photo">
+      </div>
+
+      <div class="product-details">
+        <div id="wayfinding-breadcrumbs_feature_div" style="font-size: 12px; color: #64748b; margin-bottom: 8px;">
+          Clothing, Shoes & Jewelry › Women › Clothing › Coats, Jackets & Vests › Trench
+        </div>
+        <h1 id="productTitle">Oversized Wool Blend Trench Coat - Warm Camel</h1>
+        <div class="price-row">$129.99</div>
+
+        <div class="specs-box">
+          • Premium heavyweight wool-blend construction with structured double-breasted lapels.<br>
+          • Flattering tailored silhouette with tortoise-shell buttons and belted cuff details.<br>
+          • Studio photography captured in 5600K balanced lighting.
+        </div>
+
+        <div class="callout-box">
+          💡 <strong>Judges Test Tip:</strong> Look at the Honest 4.0 widget in the bottom-right corner! Click on the <strong>✨ Reality Check</strong> tab to drag the split slider and view the AI-synthesized reality against the studio photo.
+        </div>
+      </div>
+    </div>
+
+    <!-- Customer Reviews Feed -->
+    <div class="reviews-section">
+      <div class="reviews-title">Verified Customer Reviews (On-Page Feed)</div>
+      
+      <div id="reviews-container">
+        <div class="review-item" data-hook="review-body">
+          <div class="review-author">Sarah M. (Verified Purchase) ★★★☆☆</div>
+          "The coat looks beautiful in the studio pictures, but in normal home lighting the color is a noticeably darker tan. The fabric is much thinner than expected and arrived very wrinkly."
+        </div>
+        <div class="review-item" data-hook="review-body">
+          <div class="review-author">Jessica T. (Verified Purchase) ★★★★☆</div>
+          "Good coat overall, but the lapels are quite limp and definitely need steam ironing to stand up. Sizing runs a bit boxier than the mannequin shown on the website."
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const PRODUCTS = [
+      {
+        title: "Oversized Wool Blend Trench Coat - Warm Camel",
+        price: "$129.99",
+        category: "Clothing, Shoes & Jewelry › Women › Trench Coats",
+        img: "https://images.unsplash.com/photo-1544923246-77307dd654cb?auto=format&fit=crop&w=800&q=80",
+        specs: "• Premium heavyweight wool-blend construction with structured double-breasted lapels.<br>• Flattering tailored silhouette with tortoise-shell buttons and belted cuff details.<br>• Studio photography captured in 5600K balanced lighting.",
+        reviews: [
+          { author: "Sarah M. (Verified Purchase) ★★★☆☆", text: "The coat looks beautiful in the studio pictures, but in normal home lighting the color is a noticeably darker tan. The fabric is much thinner than expected and arrived very wrinkly." },
+          { author: "Jessica T. (Verified Purchase) ★★★★☆", text: "Good coat overall, but the lapels are quite limp and definitely need steam ironing to stand up. Sizing runs a bit boxier than the mannequin shown on the website." }
+        ]
+      },
+      {
+        title: "Sony WH-1000XM5 Wireless Noise-Cancelling Headphones",
+        price: "$348.00",
+        category: "Electronics › Audio › Headphones › Over-Ear",
+        img: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80",
+        specs: "• Industry-leading noise cancellation with two processors and 8 microphones.<br>• Ultra-comfortable, lightweight design with soft fit leather.<br>• Crystal clear hands-free calling with 4 beamforming microphones.",
+        reviews: [
+          { author: "David K. (Verified Purchase) ★★★★★", text: "Matches the photos and hype completely. Build quality is top tier. The matte finish does pick up some finger oil smudges, but sound is unmatched." },
+          { author: "Marcus R. (Verified Purchase) ★★★★★", text: "Super lightweight, authentic Sony engineering. Extremely comfortable for long flights." }
+        ]
+      },
+      {
+        title: "Vintage Retro Corduroy Bomber Jacket - Mustard Ochre",
+        price: "$68.50",
+        category: "Clothing, Shoes & Jewelry › Men › Jackets & Coats › Bomber",
+        img: "https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=800&q=80",
+        specs: "• 100% thick-wale ribbed corduroy fabric with vintage enzyme wash.<br>• Relaxed dropped-shoulder fit with ribbed cuffs and elastic waistband.<br>• Color treated for distinctive retro warmth.",
+        reviews: [
+          { author: "Tariq A. (Verified Purchase) ★★☆☆☆", text: "Color is much more dull brown-yellow than the vibrant mustard in the photoshoot. Also shrank almost a full size after first cold wash." },
+          { author: "Ahmed H. (Verified Purchase) ★★★☆☆", text: "Looks decent with a hoodie underneath, but sizing runs significantly smaller than the US sizing chart." }
+        ]
+      }
+    ];
+
+    function switchProduct(idx) {
+      const p = PRODUCTS[idx];
+      document.getElementById('productTitle').innerText = p.title;
+      document.querySelector('.price-row').innerText = p.price;
+      document.getElementById('wayfinding-breadcrumbs_feature_div').innerText = p.category;
+      document.getElementById('product-img-el').src = p.img;
+      document.querySelector('.specs-box').innerHTML = p.specs;
+
+      const revBox = document.getElementById('reviews-container');
+      revBox.innerHTML = p.reviews.map(r => `
+        <div class="review-item" data-hook="review-body">
+          <div class="review-author">${r.author}</div>
+          "${r.text}"
+        </div>
+      `).join('');
+
+      document.querySelectorAll('.btn-switch').forEach((btn, i) => {
+        btn.classList.toggle('active', i === idx);
+      });
+
+      // Trigger URL state change so Honest 4.0 detects the SPA switch!
+      window.history.pushState({}, p.title, `?item=${idx}`);
+      window.dispatchEvent(new Event('popstate'));
+    }
+  </script>
+
+  <!-- Load Honest 4.0 Content Script into Page -->
+  <script src="content.js"></script>
+</body>
+</html>

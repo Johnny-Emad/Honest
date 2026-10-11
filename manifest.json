@@ -1,0 +1,49 @@
+{
+  "manifest_version": 3,
+  "name": "Honest 4.0 - Generative AI Visual Reality & Multi-Modal Product Auditor",
+  "version": "4.0.0",
+  "description": "Banana Hacks 2026 Edition: Detects e-commerce visual discrepancies via Multimodal Vision (Gemini 1.5 Flash) and generates photorealistic 'Consumer Reality' previews (FLUX/SD) directly on shopping pages.",
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "host_permissions": [
+    "*://*.amazon.com/*",
+    "*://*.amazon.eg/*",
+    "*://*.noon.com/*",
+    "*://*.shein.com/*",
+    "*://*.aliexpress.com/*",
+    "http://localhost:5000/*",
+    "file:///*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.amazon.com/*",
+        "*://*.amazon.eg/*",
+        "*://*.noon.com/*",
+        "*://*.shein.com/*",
+        "*://*.aliexpress.com/*",
+        "file:///*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["style.css"],
+      "matches": [
+        "*://*.amazon.com/*",
+        "*://*.amazon.eg/*",
+        "*://*.noon.com/*",
+        "*://*.shein.com/*",
+        "*://*.aliexpress.com/*",
+        "file:///*"
+      ]
+    }
+  ]
+}

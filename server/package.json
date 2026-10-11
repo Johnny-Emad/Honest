@@ -1,0 +1,14 @@
+{
+  "name": "honest-reality-agent",
+  "version": "4.0.0",
+  "description": "Banana Hacks 2026: Multi-Modal Vision Auditor & Generative Reality Agent for Honest 4.0",
+  "main": "agent.js",
+  "scripts": {
+    "start": "node agent.js",
+    "dev": "node agent.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2"
+  }
+}
